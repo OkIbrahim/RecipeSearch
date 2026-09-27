@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 500;
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 130rem;
+}
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: violet;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 30%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  background-color: lightgoldenrodyellow;
+  outline: 1px solid violet;
+
+  &::placeholder {
+    color: green;
+  }
+}
+
+#searchBtn {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 2rem;
+  background-color: violet;
+  cursor: pointer;
+  color: green;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 3rem;
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  padding: 2rem;
+}
+
+.meal-card {
+  background-color: aquamarine;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.meal-card img {
+  border-radius: 1rem;
+}
+
+.meal-card h2 {
+  font-size: 2rem;
+}
+
+.view-recipe-btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 2rem;
+  background-color: violet;
+  color: green;
+  cursor: pointer;
+}
+
+/* =========================================
+   RECIPE DETAILS PAGE
+========================================= */
+
+.recipe-page {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+/* Back button */
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 3rem;
+
+  color: violet;
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  color: #8b008b;
+}
+
+/* Recipe header */
+
+.recipe-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.recipe-category {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  color: violet;
+
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+
+  margin-bottom: 1rem;
+}
+
+.recipe-header h1 {
+  margin-bottom: 1rem;
+
+  font-size: 5rem;
+  color: #333;
+}
+
+.recipe-area {
+  font-size: 1.8rem;
+  color: #666;
+}
+
+/* Hero section */
+
+.recipe-hero {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    0.8fr;
+
+  gap: 4rem;
+
+  align-items: start;
+
+  margin-bottom: 5rem;
+}
+
+/* Recipe image */
+
+.recipe-image-container {
+  width: 100%;
+}
+
+.recipe-image {
+  display: block;
+
+  width: 100%;
+
+  max-height: 55rem;
+
+  object-fit: cover;
+
+  border-radius: 1.5rem;
+
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+}
+
+/* Ingredients */
+
+.ingredients-container {
+  background-color: white;
+
+  padding: 2.5rem;
+
+  border-radius: 1.5rem;
+
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.ingredients-container h2 {
+  font-size: 3rem;
+
+  color: #333;
+
+  margin-bottom: 2rem;
+}
+
+.ingredients-list {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.2rem;
+}
+
+.ingredients-list li {
+  font-size: 1.7rem;
+
+  line-height: 1.5;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid #eee;
+}
+
+.ingredient-measure {
+  font-weight: 700;
+
+  color: violet;
+
+  margin-right: 0.5rem;
+}
+
+/* Instructions */
+
+.instructions-container {
+  background-color: white;
+
+  padding: 3rem;
+
+  border-radius: 1.5rem;
+
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 3rem;
+}
+
+.instructions-container h2 {
+  font-size: 3rem;
+
+  color: #333;
+
+  margin-bottom: 2rem;
+}
+
+.instructions {
+  font-size: 1.8rem;
+
+  line-height: 1.8;
+
+  color: #444;
+
+  white-space: pre-line;
+}
+
+/* Video button */
+
+.video-container {
+  text-align: center;
+
+  margin-top: 3rem;
+}
+
+.video-btn {
+  display: inline-block;
+
+  padding: 1.4rem 2.5rem;
+
+  background-color: violet;
+
+  color: white;
+
+  border-radius: 0.8rem;
+
+  text-decoration: none;
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.video-btn:hover {
+  background-color: #8b008b;
+
+  transform: translateY(-2px);
+}
+
+/* Error message */
+
+.error-message {
+  text-align: center;
+
+  font-size: 2rem;
+
+  color: red;
+
+  margin-top: 5rem;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .recipe-page {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .recipe-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .recipe-hero {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .recipe-image {
+    max-height: 40rem;
+  }
+
+  .ingredients-container {
+    padding: 2rem;
+  }
+
+  .ingredients-container h2,
+  .instructions-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .instructions-container {
+    padding: 2rem;
+  }
+
+  .instructions {
+    font-size: 1.6rem;
+
+    line-height: 1.7;
+  }
+}
